@@ -50,9 +50,7 @@ $('.modal__clouse').on('click', function(){
   $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
 });
 
-// $('.button_mini').on('click', function(){
-//   $('.overlay, #order').fadeIn('slow');
-// });
+
 
 $('.button_mini').each(function(i) {
  $(this).on('click', function() {
@@ -61,7 +59,7 @@ $('.button_mini').each(function(i) {
  })
 });
  
-// валидация форм
+
 
 function valideForm(form) {
   $(form).validate({
@@ -88,11 +86,6 @@ function valideForm(form) {
   valideForm('#order form');
 
 
-// маска ввода
-// $('input[name=phone]').mask("+3 (999) 999-99-99");
-// не заработала ? закоментировала что б не мешала
-
-// скрипт для отправки данных на сервер 
 $('form').submit(function(e){
   e.preventDefault();
   $.ajax({
@@ -119,7 +112,8 @@ $('form').submit(function(e){
     }
 });
 
-// скрипт для плавной прокрутки скроля
+
+
 $("a[href=#up]").click(function(){
   const _href = $(this).attr("href");
   $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
@@ -129,39 +123,6 @@ $("a[href=#up]").click(function(){
 new WOW().init();
   
 });
-
-
-
-
-
-
-
-// валидация форм 
-// если нужно ввести определенное число символов minlength: 2
-// $('#consultation form').validate({
-//   rules: {
-//     name:  {
-//       required: true,
-//       minlength: 2
-//     },
-//     phone: "required",
-//     email: {
-//       required: true,
-//       email: true
-//     }
-// },
-// messages: {
-//   name: {
-//     required: "Пожалуйста, введите свое имя",
-//     minlength: jQuery.validator.format("Введите {0} символов!")
-//   },
-//   phone: "Пожалуйста, введите свой номер телефона",
-//   email: {
-//     required: "Пожалуйста, введите свою почту",
-//     email: "Неправильно введен адрес почты"
-//   }
-// }
-//   });
 
 
 
